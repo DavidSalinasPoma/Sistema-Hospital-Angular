@@ -1,27 +1,79 @@
-# Adminpro
+# AngularAvanzado CLI Practica
+Apuntes del curso
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.9.
+<!-- 1.- Ayuda el componente-->
+ng generate c --help
 
-## Development server
+<!-- 2.-  Para crear un componente sin el testing -->
+ng g c --skipTests=true
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+<!-- 3.- Para crear un servicio sin el archivo Test -->
+ng g s --skitTest=true
 
-## Code scaffolding
+<!-- 4.- Para simular crear directorios y archivos -->
+ng g s services/user --dry-run (-d)shorcut..
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+<!-- Los servicios desde angular 6 Ya no es necesario invocarlos en el Modulo Principal  -->
+SERVICES
 
-## Build
+<!-- ng g --help  Este comando Puede generar todo eso -->
+Available Schematics:
+  Collection "@schematics/angular" (default):
+    app-shell
+    application
+    class
+    component
+    directive
+    enum
+    guard
+    interceptor
+    interface
+    library
+    module
+    pipe
+    resolver
+    service
+    service-worker
+    web-worker
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+<!-- 5.- ng g guard  -->
+<!-- Toda clase que tenga..  -->
+@injectable({
+    provided: 'root'
+})
+<!-- No necesita que se invoque en el modulo principal -->
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+<!-- Creando uel directorio actual de la aplicacion -->
+1.- auth: contiene el login y el register
+2.- pages: contendra la pagina 404 y la pagina dsahboard luego de que el login sea correcto.
+3.- shared: Contiene todas laas cosas que se van a utilizar globalmente en toda al aplicación.
+4.- shared/breadcrumbs: Son las migajas de pan de la aplicación.
+5.- shared/sidebar: Es el Sidebar del la plantilla adminPro, este es un componente que se va utilizar globalmente.
+5.- shared/sidebar: Es el Header del la plantilla adminPro, este es un componente que se va utilizar globalmente.
+5.- shared/footer: Es el Footer del la plantilla adminPro, este es un componente que se va utilizar globalmente.
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+<!-- Agregando libreria de adminPro al index y copiando los plugins a los assets -->
+en assets
 
-## Further help
+<!-- PAGES  -->
+Son de usuarios ya autenticados.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+<!-- La app principal MAIN se pone  en el componenete principal  -->
+pages/pages
+
+<!-- Crear un modulo appRouting -->
+en APP
+ng g m appRouting --flat
+
+
+<!-- Separar el template principal Admin pro de la pagina login -->
+ng g c pages/pages --flat --skipTests -is <!-- Esta pagina se mostrara cuando se este autentificado -->
+
+<!-- Creacion de un modulo -->
+ng g m shared/shared
+
+<!-- Los components son pequequeños pedasos de la aplicacion -->
+$ ng g m components/components --flat  // Crear solo el modulo
+ng g c components/incrementador --skipTests=true // Crea solo el componente
