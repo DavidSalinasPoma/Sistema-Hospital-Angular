@@ -1,1 +1,51 @@
-<router-outlet></router-outlet>
+  <!-- ============================================================== -->
+  <!-- Main wrapper - style you can find in pages.scss -->
+  <!-- ============================================================== -->
+  <div id="main-wrapper">
+    <app-header></app-header>
+    <app-sidebar></app-sidebar>
+
+    <!-- ============================================================== -->
+    <!-- Page wrapper  -->
+    <!-- ============================================================== -->
+    <div class="page-wrapper">
+      <!-- ============================================================== -->
+      <!--  Aqui el sistema de rutas principal de pagesComponent Container fluid -->
+      <!-- ============================================================== -->
+      <div class="container-fluid">
+
+        <!-- Breadcroums -->
+        <app-breadcroumbs></app-breadcroumbs>
+        <!-- Fin Braedcroums -->
+
+        <!-- ============================================================== -->
+        <!-- Start Page Content -->
+        <!-- ============================================================== -->
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-body">
+                <!-- Sistema de rutas -->
+                <router-outlet></router-outlet>
+                <!-- Fin sistema de rutas -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ============================================================== -->
+        <!-- End PAge Content -->
+        <!-- ============================================================== -->
+
+      </div>
+      <!-- Fin container fluid -->
+
+      <!-- Footer -->
+      <app-footer></app-footer>
+      <!-- Fin footer -->
+
+    </div>
+    <!-- Fin pages Wrapper -->
+
+
+  </div>
+  <!-- Fin main wrapper -->

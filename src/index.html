@@ -13,6 +13,10 @@
   <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon.png">
   <!-- Bootstrap Core CSS -->
   <link href="./assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- page css para el loging-->
+  <!-- <link href="./assets/css/pages/login-register-lock.css" rel="stylesheet"> -->
+
   <!-- Custom CSS -->
   <link href="./assets/css/style.css" rel="stylesheet">
   <!-- You can change the theme colors from here -->
@@ -22,9 +26,27 @@
 
 </head>
 
-<body>
+
+<!-- Definiendo la estructura del template admin pro -->
+
+<body class="fix-header card-no-border fix-sidebar">
+  <!-- ============================================================== -->
+  <!-- Preloader - style you can find in spinners.css -->
+  <!-- custom.min.js hace que funcione el preloaded-->
+  <!-- ============================================================== -->
+  <div class="preloader">
+    <div class="loader">
+      <div class="loader__figure"></div>
+      <p class="loader__label">Administrador David</p>
+    </div>
+  </div>
+  <!-- Fin preoloaded -->
+
+
   <app-root></app-root>
 </body>
+
+
 <!-- All Jquery -->
 <!-- ============================================================== -->
 <script src="./assets/plugins/jquery/jquery.min.js"></script>

@@ -14,11 +14,18 @@ import { PagesRoutingModule } from './pages-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { PagesComponent } from './pages.component';
 
+// Modulos importados desde otro modulos de la App
+import { SharedModule } from '../shared/shared.module';
+import { ProgressComponent } from './progress/progress.component';
+import { Grafica1Component } from './grafica1/grafica1.component';
+
 
 @NgModule({
   declarations: [
     DashboardComponent,
-    PagesComponent
+    PagesComponent,
+    ProgressComponent,
+    Grafica1Component
   ],
   imports: [
     CommonModule,
@@ -26,6 +33,7 @@ import { PagesComponent } from './pages.component';
     PagesRoutingModule,
     // RouterModule
     // Modulos importados
+    SharedModule
 
   ],
   exports: [ // Para que puedan ser utilizadas en otros modulos

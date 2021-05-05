@@ -1,14 +1,20 @@
 import { Component, OnInit } from '@angular/core';
+import { YEAR } from './../../assets/plugins/moment/src/lib/units/constants';
 
 @Component({
   selector: 'app-nopagesfound',
   templateUrl: './nopagesfound.component.html',
-  styles: [
+  styleUrls: [
+    './nopagesfound.component.css'
   ]
 })
 export class NopagesfoundComponent implements OnInit {
 
-  constructor() { }
+  public anioActual: number;
+
+  constructor() {
+    this.anioActual = new Date().getFullYear();
+  }
 
   ngOnInit(): void {
   }

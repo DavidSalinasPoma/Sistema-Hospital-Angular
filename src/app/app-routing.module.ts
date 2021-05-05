@@ -33,7 +33,7 @@ const routes: Routes = [
   imports: [
     CommonModule,
     RouterModule.forRoot(routes),
-    // Rutas tomadas
+    // importar las rutas hijas de la app
     AuthRoutingModule,
     PagesRoutingModule
   ],
