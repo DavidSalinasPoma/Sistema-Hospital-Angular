@@ -1,0 +1,17 @@
+<div class="input-group">
+  <span class="input-group-btn">
+    <button class="btn btn-primary" [ngClass]="this.btnClass" type="button" (click)="this.cambiarValor(-5)">
+      <i class="fa fa-minus"></i>
+    </button>
+  </span>
+
+  <!-- El input del progressBar --necesita de los formularios Reactivos -->
+  <input type="number" class="form-control" placeholder="Product name" [(ngModel)]="this.progreso"
+    (ngModelChange)="onChange($event)" [ngClass]="{'form-control-danger': this.progreso > 100 || this.progreso < 0}">
+
+  <span class="input-group-btn">
+    <button class="btn btn-primary" [ngClass]="this.btnClass" type="button" (click)="this.cambiarValor(5)">
+      <i class="fa fa-plus"> </i>
+    </button>
+  </span>
+</div>

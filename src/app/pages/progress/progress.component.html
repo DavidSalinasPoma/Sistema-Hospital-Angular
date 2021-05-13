@@ -1,1 +1,58 @@
-<p>progress works!</p>
+<!-- ProgresBar -->
+<div class="row">
+  <div class="col-12">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Striped Progress bar</h4>
+
+
+        <!-- Barra de progreso 1 -->
+        <div class="progress m-t-20">
+          <div class="progress-bar bg-info progress-bar-striped active" [style.width]="this.getProgreso1"
+            style="height:5px;" role="progressbar">
+
+          </div>
+        </div>
+
+        <!-- Barra de progreso 2 -->
+        <div class="progress m-t-20">
+          <div class="progress-bar bg-primary progress-bar-striped active" [style.width]="this.getProgreso2"
+            style="height:5px;" role="progressbar">
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Fin ProgresBar -->
+
+<!-- Botones e interacion para el progresBar -->
+<div class="row">
+  <div class="col-6">
+    <div class="card">
+      <div class="card-body">
+
+        <!-- Este es el componente padre -->
+        <!-- []  Envia Datos al hijo -->
+        <!-- ()  Recibe datos del padre -->
+        <app-incrementador (salidaDeDatos)="this.progreso1=$event" [valor]="this.progreso1"></app-incrementador>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Otros botones -->
+  <div class="col-6">
+    <div class="card">
+      <div class="card-body">
+
+        <!-- Este es el componente padre -->
+        <app-incrementador (salidaDeDatos)="this.progreso2=$event" [valor]="this.progreso2" [btnClass]="'btn btn-info'">
+        </app-incrementador>
+
+      </div>
+    </div>
+  </div>
+
+</div>

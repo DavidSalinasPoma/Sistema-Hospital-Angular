@@ -31,7 +31,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
+  imports: [RouterModule.forChild(routes)], // debe ser importado en alguna parte
   exports: [RouterModule]
 })
 export class PagesRoutingModule { }

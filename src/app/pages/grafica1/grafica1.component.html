@@ -1,1 +1,21 @@
-<p>grafica1 works!</p>
+<!-- Este es el componente padre -->
+<!-- []  Envia Datos del padre al hijo -->
+<!-- ()  Recibe datos del padre -->
+<div class="row">
+  <div class="col-6">
+    <app-donna titulo="Grafica de ventas" [label]="this.label" [data]="this.data"></app-donna>
+  </div>
+
+  <div class="col-6">
+    <app-donna titulo="Orden"></app-donna>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-6">
+    <app-donna titulo="Compras"></app-donna>
+  </div>
+
+
+
+</div>
