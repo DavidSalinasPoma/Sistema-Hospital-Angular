@@ -6,6 +6,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { Grafica1Component } from './grafica1/grafica1.component';
 import { PagesComponent } from './pages.component';
 import { ProgressComponent } from './progress/progress.component';
+import { AccountSettingsComponent } from './account-settings/account-settings.component';
 
 // Definiendo la rutas de modulo Pages
 const routes: Routes = [
@@ -21,6 +22,7 @@ const routes: Routes = [
       { path: '', component: DashboardComponent },  // es un componente hijo
       { path: 'progress', component: ProgressComponent }, // es un componente hijo
       { path: 'grafica1', component: Grafica1Component }, // es un componente hijo
+      { path: 'account-settings', component: AccountSettingsComponent }, // es un componente hijo
 
 
       // { path: 'account-setting', component: AccountSettingComponent },

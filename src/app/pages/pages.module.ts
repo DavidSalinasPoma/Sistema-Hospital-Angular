@@ -16,6 +16,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { PagesComponent } from './pages.component';
 import { ProgressComponent } from './progress/progress.component';
 import { Grafica1Component } from './grafica1/grafica1.component';
+import { AccountSettingsComponent } from './account-settings/account-settings.component';
 
 // Modulos importados desde otro modulos de la App
 import { SharedModule } from '../shared/shared.module';
@@ -27,7 +28,8 @@ import { ComponentsModule } from '../components/components.module';
     DashboardComponent,
     PagesComponent,
     ProgressComponent,
-    Grafica1Component
+    Grafica1Component,
+    AccountSettingsComponent
   ],
   imports: [
     CommonModule,
@@ -42,7 +44,10 @@ import { ComponentsModule } from '../components/components.module';
   ],
   exports: [ // Para que puedan ser utilizadas en otros modulos
     DashboardComponent,
-    PagesComponent
+    PagesComponent,
+    ProgressComponent,
+    Grafica1Component,
+    AccountSettingsComponent
   ]
 })
 export class PagesModule { }

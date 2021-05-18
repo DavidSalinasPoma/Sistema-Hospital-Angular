@@ -7,10 +7,12 @@ import { CommonModule } from '@angular/common';
 
 // Ruta de este modulo en especifico
 import { AuthRoutingModule } from './auth-routing.module';
+import { RouterModule } from '@angular/router';
 
 // Componentes de este modulo en particular
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -20,7 +22,9 @@ import { RegisterComponent } from './register/register.component';
   ],
   imports: [
     CommonModule,
-    AuthRoutingModule
+    AuthRoutingModule,
+    RouterModule,
+    FormsModule
   ],
   exports: [  // Para que puedan ser urtilizados en otros modulos
     LoginComponent,
