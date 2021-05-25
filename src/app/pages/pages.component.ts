@@ -21,7 +21,12 @@ export class PagesComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
+    // En los modulos se dispara javascript de manera global
+
     customInitFunctions();
+    // console.log('Hola');
+
     const linkTheme = document.querySelector('#theme');
     this.settingsServices.persistenciaTheme(linkTheme);
   }

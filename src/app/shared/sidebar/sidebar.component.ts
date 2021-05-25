@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 // Servicio para menus interactivos
 import { SidebarMenuService } from 'src/app/services/sidebar-menu.service';
 
+
 interface Menu {
   titulo: string;
   icono: string;
@@ -18,7 +19,15 @@ interface Menu {
     {
       titulo: string,
       url: string
-    }
+    },
+    {
+      titulo: string,
+      url: string
+    },
+    {
+      titulo: string,
+      url: string
+    },
   ],
 }
 

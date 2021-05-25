@@ -16,6 +16,14 @@ interface Menu {
     {
       titulo: string,
       url: string
+    },
+    {
+      titulo: string,
+      url: string
+    },
+    {
+      titulo: string,
+      url: string
     }
   ],
 }
@@ -32,7 +40,9 @@ export class SidebarMenuService {
       submenu: [
         { titulo: 'Principal', url: '/' },
         { titulo: 'Progressbar', url: '/dashboard/progress' },
-        { titulo: 'Graficas', url: '/dashboard/grafica1' }
+        { titulo: 'Graficas', url: '/dashboard/grafica1' },
+        { titulo: 'Promesas', url: '/dashboard/promesas' },
+        { titulo: 'Rxjs', url: '/dashboard/rxjs' },
       ]
     }
   ]
